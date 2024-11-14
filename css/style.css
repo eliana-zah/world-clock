@@ -45,6 +45,7 @@ select {
 }
 
 .time {
+  font-family: serif;
   font-size: 48px;
   font-weight: bold;
 }
