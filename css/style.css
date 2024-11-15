@@ -1,14 +1,18 @@
 body {
-  background: #facf5a;
+  background-image: url("https://image.shutterstock.com/image-vector/world-map-outline-linear-doodle-600nw-2491310117.jpg?app=peacock");
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 h1 {
+  color: black;
   font-size: 46px;
   text-align: center;
 }
 
 h2 {
+  color: black;
   font-size: 28px;
   margin: 0 0 10px;
 }
@@ -24,24 +28,21 @@ select {
 }
 
 .container {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 20px;
   box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
-  margin: 60px auto;
-  max-width: 600px;
+  margin: 40px auto;
+  max-width: 450px;
   padding: 40px;
 }
 
 .city {
-  border-bottom: 1px dashed #facf5a;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
   display: flex;
   justify-content: space-between;
-  margin: 10px 0;
-  padding: 30px 0;
-}
-
-.city:last-child {
-  border: none;
+  margin: 20px 4px;
+  padding: 26px 10px;
 }
 
 .time {
@@ -57,12 +58,12 @@ select {
 }
 
 .date {
-  opacity: 0.6;
+  /*opacity: 0.6;*/
 }
 
 footer {
   color: rgba(0, 0, 0, 0.7);
   font-size: 16px;
   text-align: center;
-  margin-bottom: 26px;
+  margin-bottom: 36px;
 }
