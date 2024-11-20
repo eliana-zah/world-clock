@@ -45,7 +45,7 @@ function updateCity(event) {
   let currentCityName = currentTime.replace("_", " ").split("/")[1];
   let currentCityTime = moment().tz(currentCityName);
 
-  let myCityHead = ` 
+  let myCityHeader = ` 
     <div class="city">
      <div>
       <h2>${currentCityName}</h2>
@@ -55,14 +55,13 @@ function updateCity(event) {
         "h:mm [<small>]A[</small>]"
       )}</div>
     </div>
-    <a href="/">Back to all cities</a>
     `;
 
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
   citiesElement.innerHTML =
-    myCityHead +
+    myCityHeader +
     ` 
     <div class="city">
      <div>
