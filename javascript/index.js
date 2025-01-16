@@ -42,26 +42,26 @@ function updateTime() {
 function updateCity(event) {
   let cityTimeZone = event.target.value;
   let currentTime = moment.tz.guess();
-  let currentCityName = currentTime.replace("_", " ").split("/")[1];
+  let currentCityName = currentTime.replace(currentTime, "Your local time");
   let currentCityTime = moment().tz(currentCityName);
 
-  let myCityHeader = ` 
-    <div class="city">
-     <div>
-      <h2>${currentCityName}</h2>
-      <div class="date">${currentCityTime.format("MMMM Do YYYY")}</div>
-     </div>
-      <div class="time">${currentCityTime.format(
-        "h:mm [<small>]A[</small>]"
-      )}</div>
+  let userLocalTimezoneHeader = `
+   <div class="city">
+    <div>
+     <h2>${currentCityName}</h2>
+     <div class="date">${currentCityTime.format("MMMM Do YYYY")}</div>
     </div>
-    `;
+     <div class="time">${currentCityTime.format(
+       "h:mm [<small>]A[</small>]"
+     )}</div>
+   </div>
+   `;
 
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
   citiesElement.innerHTML =
-    myCityHeader +
+    userLocalTimezoneHeader +
     ` 
     <div class="city">
      <div>
